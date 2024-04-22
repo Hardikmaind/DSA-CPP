@@ -18,8 +18,7 @@
 #define lil long long int
 #define yes cout << "YES" << endl
 #define no cout << "NO" << endl
-#define input(i, a, n)          \
-	;                           \
+#define input(i, a, n);          \
 	for (int i = 0; i < n; i++) \
 	{                           \
 		cin >> a[i];            \
@@ -30,6 +29,8 @@
 	while (t--)
 
 using namespace std;
+
+// in this problem we just have to check whether the minimum element is at the start and end of the array or not. if it is then we can make the array equal by adding the minimum element to the end of the array. else we can't make the array equal.. so print yes or no accordingly.
 
 int main()
 {
