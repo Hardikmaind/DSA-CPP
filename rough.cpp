@@ -1,80 +1,77 @@
-#include <iostream>
-#include <winsock2.h>
+#include <bits/stdc++.h>
+using namespace std;
 
-#pragma comment(lib, "ws2_32.lib")
 
-int main() {
-    WSADATA wsaData;
-    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
-        std::cerr << "Error: WSAStartup failed\n";
-        return 1;
-    }
-
-    // Create a socket
-    SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, 0);
-    if (serverSocket == INVALID_SOCKET) {
-        std::cerr << "Error: Failed to create socket\n";
-        WSACleanup();
-        return 1;
-    }
-
-    // Define the server address
-    struct sockaddr_in serverAddr;
-    serverAddr.sin_family = AF_INET;
-    serverAddr.sin_port = htons(8080);  // Example port number
-    serverAddr.sin_addr.s_addr = INADDR_ANY;
-
-    // Bind the socket to the server address
-    if (bind(serverSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR) {
-        std::cerr << "Error: Bind failed\n";
-        closesocket(serverSocket);
-        WSACleanup();
-        return 1;
-    }
-
-    // Start listening for incoming connections
-    if (listen(serverSocket, SOMAXCONN) == SOCKET_ERROR) {
-        std::cerr << "Error: Listen failed\n";
-        closesocket(serverSocket);
-        WSACleanup();
-        return 1;
-    }
-
-    std::cout << "Server started and listening on port 8080\n";
-
-    while (true) {
-        // Accept incoming connection
-        SOCKET clientSocket = accept(serverSocket, NULL, NULL);
-        if (clientSocket == INVALID_SOCKET) {
-            std::cerr << "Error: Accept failed\n";
-            continue;
+vector<int> findmax(vector<int>v,int K){
+   for(int left=0;left<v.size();left++){
+       int right=left+K-1;
+       if(right>=v.size()){
+           break;
         }
-
-        std::cout << "Client connected\n";
-
-        // Handle client request
-        char buffer[1024];
-        memset(buffer, 0, sizeof(buffer));
-        int bytesRead = recv(clientSocket, buffer, sizeof(buffer), 0);
-        if (bytesRead == SOCKET_ERROR) {
-            std::cerr << "Error: Read failed\n";
-        } else {
-            std::cout << "Received message from client: " << buffer << std::endl;
-        }
-
-        // Send response back to client
-        const char* response = "Hello from server";
-        int bytesSent = send(clientSocket, response, strlen(response), 0);
-        if (bytesSent == SOCKET_ERROR) {
-            std::cerr << "Error: Write failed\n";
-        }
-
-        // Close client socket
-        closesocket(clientSocket);
-    }
-
-    // Close server socket
-    closesocket(serverSocket);
-    WSACleanup();
-    return 0;
+       int max=INT_MIN;
+       for(int i=left;i<=right;i++){
+           if(v[i]>max){
+               max=v[i];
+           }
+       }
+       v[left]=max; 
+   }
+    vector<int>result(v.begin(),v.begin()+v.size()-K+1);
+    return result;
 }
+
+
+
+
+
+vector<int> findMax2(vector<int>& v, int K) {
+    deque<int> dq; // Deque to store indices of elements
+
+    vector<int> result; // Vector to store maximum values
+
+    for (int i = 0; i < v.size(); i++) {
+        // Remove indices outside the current window from deque's front
+        if (!dq.empty() && dq.front() < i - K + 1) {
+            dq.pop_front();
+        }
+
+        // Remove elements smaller than v[i] from deque's back
+        while (!dq.empty() && v[i] > v[dq.back()]) {
+            dq.pop_back();
+        }
+
+        // Add current index to deque
+        dq.push_back(i);
+
+        // Add maximum value for the current window to result
+        if (i >= K - 1) {
+            result.push_back(v[dq.front()]);
+        }
+    }
+
+    return result;
+}
+
+int main(){
+   int N,K;
+   K=3;
+    N=6;
+    vector<int>v={1,3,-1,-3,5,3};
+   
+    vector<int>result=findmax(v,K);
+    for(int x:result){
+        cout<<x<<" ";
+    }
+    cout<<endl;
+
+
+
+
+
+    vector<int>result2=findMax2(v,K);
+    for(int x:result2){
+        cout<<x<<" ";
+    }
+}
+
+
