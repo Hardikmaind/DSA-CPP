@@ -19,7 +19,7 @@ public:
             if(!dead.count(curr)) {
                 dead.insert(curr);
                 que.push(curr);
-            }
+            }                                   
             curr[i] = ch;
         }
     }
