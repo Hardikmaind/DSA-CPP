@@ -2,6 +2,12 @@
 using namespace std;
 #define int long long
 signed main(){
+    // in this the test cases are from given input and output files
+    #ifndef ONLINE_JUDGE 
+    freopen("../input.txt", "r", stdin); 
+    freopen("../output.txt", "w", stdout); 
+    #endif
+
     ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
     int t;cin>>t;
     while(t--){
