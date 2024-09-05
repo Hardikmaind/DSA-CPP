@@ -339,14 +339,14 @@ int main() {
 	// but the worst case is linear in nature, O(set size)
 
 
-	
+
 
 
 int main() {
     std::unordered_set<int> mySet = {1, 2, 3, 4, 5};
 
     int element = 3;
-    if (mySet.find(element) != mySet.end()) {
+    if (mySet.find(element) != mySet.end()) {		//this find method return and iterator to the element if found else it returns an iterator to the end of the set
         std::cout << "Element found\n";
     } else {
         std::cout << "Element not found\n";
@@ -354,7 +354,22 @@ int main() {
 
     return 0;
 }
+// In the expression if (mySet.find(element) != mySet.end()), here's what each part means:
 
+// mySet.find(element):
+// This calls the find() method on the unordered_set named mySet.
+// The find() method attempts to locate the element you're searching for (in this case, element) in the set.
+// If the element is found, it returns an iterator pointing to that element.
+// If the element is not found, it returns an iterator to the "past-the-end" position, which is represented by mySet.end().
+
+// mySet.end():
+// mySet.end() returns an iterator to a position just past the last element in the set. This is not a valid element but a marker indicating the end of the set.
+// This is used in C++ to signal that the search was unsuccessful.
+
+// "!= mySet.end()"
+// This comparison checks if the iterator returned by find() is not equal to mySet.end().
+// If find() does not find the element, the iterator will be equal to mySet.end(). Therefore, mySet.find(element) != mySet.end() will evaluate to false.
+// If the element is found, the iterator will point to that element (i.e., it won't be equal to mySet.end()), and the expression will evaluate to true.
 
 int main() {
     std::unordered_set<int> mySet = {1, 2, 3, 4, 5};
