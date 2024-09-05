@@ -338,6 +338,43 @@ int main() {
 	// tle -> switch to set 
 	// but the worst case is linear in nature, O(set size)
 
+
+	
+
+
+int main() {
+    std::unordered_set<int> mySet = {1, 2, 3, 4, 5};
+
+    int element = 3;
+    if (mySet.find(element) != mySet.end()) {
+        std::cout << "Element found\n";
+    } else {
+        std::cout << "Element not found\n";
+    }
+
+    return 0;
+}
+
+
+int main() {
+    std::unordered_set<int> mySet = {1, 2, 3, 4, 5};
+
+    int element = 6;
+    if (mySet.count(element) > 0) {
+        std::cout << "Element found\n";
+    } else {
+        std::cout << "Element not found\n";
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
 	multiset<int> ms; 
 
 	ms.insert(1); 
