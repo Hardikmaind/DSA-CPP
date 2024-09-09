@@ -595,7 +595,7 @@ int main() {
 	priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq; 
 
 
-	dequeue<int> dq; 
+	deque <int> dq; 
 	// push_front() 
 	// push_back() 
 	// pop_front() 
@@ -605,6 +605,14 @@ int main() {
 	// clear
 	// empty 
 	// at 
+	// Inserting elements in the deque
+    dq.push_back(10);  // Inserts 10 at the back
+    dq.push_front(20); // Inserts 20 at the front
+    dq.push_back(30);  // Inserts 30 at the back
+
+    // Peek at the front and back elements
+    cout << "Front element: " << dq.front() << endl;  // Peeking the front element (20)
+    cout << "Back element: " << dq.back() << endl;    // Peeking the back element (30)
 
 
 	list<int> ls; 
