@@ -390,6 +390,121 @@ int main() {
 
 
 
+int main() {
+    // Create an unordered_map (hashmap)
+    std::unordered_map<std::string, int> myMap;
+
+    // Insert key-value pairs
+    myMap["apple"] = 5;
+    myMap["banana"] = 2;
+    myMap["orange"] = 7;
+
+    // Iterate over the unordered_map and check values
+    std::cout << "Keys with values greater than 2:" << std::endl;
+    for (const auto& pair : myMap) {
+        if (pair.second > 2) {
+            std::cout << pair.first << std::endl; // Print the key
+        }
+    }
+
+    return 0;
+}
+
+// Explanation:
+// std::unordered_map<std::string, int>: Defines a hash map where keys are strings and values are integers.
+// for (const auto& pair : myMap): Iterates over each key-value pair in the hash map.
+// if (pair.second > 2): Checks if the value associated with the key is greater than 2.
+// std::cout << pair.first << std::endl;: Prints the key if the condition is met.
+// This code snippet will print all keys from the hash map where the value is greater than 2.
+
+
+
+
+
+
+int main() {
+    // Create an unordered_map (hashmap)
+    std::unordered_map<std::string, int> myMap;
+
+    // Insert key-value pairs
+    myMap["apple"] = 5;
+    myMap["banana"] = 2;
+    myMap["orange"] = 7;
+
+    // Accessing values using [] operator
+    std::cout << "Apple count: " << myMap["apple"] << std::endl;
+
+    // Accessing values using at() method (safe alternative, throws exception if key is not found)
+    try {
+        std::cout << "Orange count: " << myMap.at("orange") << std::endl;
+    } catch (const std::out_of_range& e) {
+        std::cout << "Key not found: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
+
+
+// In C++, to get values from keys in a std::unordered_map (which is the C++ equivalent of a hash map), you can access the value associated with a key using the [] operator or the at() method. Here's an example of how to use both:
+
+// Key Points:
+// The [] operator: If the key does not exist, it will insert a default value for that key.
+// The at() method: This throws an exception if the key is not found, making it safer when you are not sure if the key exists.
+// Both approaches let you retrieve the value for a key from an unordered map.
+
+
+
+
+
+
+
+
+
+
+// why const taken?
+
+// In C++, const is used in the iteration loop to indicate that the elements being accessed will not be modified. Here’s a breakdown of why const is used in this context:
+
+// Purpose of const in Iteration:
+// Prevent Modification:
+
+// By using const, you ensure that the values you access through the iterator or range-based for loop cannot be changed. This helps to avoid accidental modifications of the map’s elements during iteration.
+// Express Intent:
+
+// Using const makes your intention clear that you are only reading from the map and not modifying it. This enhances code readability and maintainability.
+// Example with and without const:
+// With const:
+
+
+for (const auto& pair : myMap) {
+    if (pair.second > 2) {
+        std::cout << pair.first << std::endl;
+    }
+}
+// const auto& pair ensures that pair cannot be modified inside the loop. This is appropriate when you only need to read the values.
+// Without const:
+
+
+for (auto& pair : myMap) {
+    if (pair.second > 2) {
+        std::cout << pair.first << std::endl;
+    }
+}
+// auto& pair allows modifications to pair, which means you could inadvertently change the map’s contents. This is less safe if you don’t intend to modify the elements.
+// Conclusion:
+// Using const in the loop when you only need to read data is a good practice. It provides safety by preventing modifications and makes the code more self-documenting. If you do need to modify the elements (e.g., updating values), you would omit const from the loop.
+
+
+
+
+
+
+
+
+
+
+
+
 	multiset<int> ms; 
 
 	ms.insert(1); 
