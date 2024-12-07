@@ -1,0 +1,10 @@
+#1. ctrl+b => to run the program this shortcut both compiles(builds) and runs the program.
+#2. you can  create more such snippet like i have pasted in the above folder.
+#3. gc++ header(std/c++.h) files i have already compiled in the gcc file location
+#4. that header file can be generated with the command 
+
+g++ stdc++.h -std=c++17
+
+by going to the parent folder in 
+
+C:\msys64\mingw64\include\c++\14.2.0\x86_64-w64-mingw32\bits

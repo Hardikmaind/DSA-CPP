@@ -5,7 +5,7 @@ int main() {
     std::bitset<8> myBitset; // 8-bit bitset, initially all bits are 0
 
     // Setting bits
-    myBitset.set(0);
+    myBitset.set(1);
     myBitset.set(3);
     myBitset.set(7);
     std::cout << "After setting bits: " << myBitset << std::endl; // Output: 10001001
