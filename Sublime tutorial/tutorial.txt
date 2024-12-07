@@ -8,3 +8,6 @@ g++ stdc++.h -std=c++17
 by going to the parent folder in 
 
 C:\msys64\mingw64\include\c++\14.2.0\x86_64-w64-mingw32\bits
+
+
+#%. Install FastOlympicCoding Package since all the functions like gcs etc is already present in that. also autocomplete is also present in that
