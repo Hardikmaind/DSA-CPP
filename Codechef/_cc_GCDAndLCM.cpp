@@ -1,5 +1,3 @@
-<snippet>
-	<content><![CDATA[
 #include <bits/stdc++.h>
 #include <cstdio>
 #include <cstring>
@@ -20,16 +18,25 @@
 #define mp(x, y) make_pair(x, y)
 #define mem(a, val) memset(a, val, sizeof(a))
 #define eb emplace_back
-#define gcd(a, b) ((b) == 0 ? (a) : GCD((b), (a) % (b)))
-#define safelcm(a, b) (((a) / GCD((a), (b))) * (b))
 #define f first
 #define s second
 
 using namespace std;
 
-void solve(){
-    //code here
-    
+void solve()
+{
+    int a, b, k;
+    cin >> a >> b >> k;
+    if (a > b){
+        swap(a, b);
+    }
+    int h = __gcd(a, b);
+    if (k == 1)    {
+        cout << h + a << "\n";
+    }
+    else{
+        cout << 2 * h << "\n";
+    }
 }
 int main(){
     std::ios::sync_with_stdio(false);
@@ -45,9 +52,3 @@ int main(){
     }
     return 0;
 }
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>cc</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
-</snippet>

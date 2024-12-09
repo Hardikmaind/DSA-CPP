@@ -89,7 +89,8 @@ public:
 
 int main(){
     Solution s;
-    vector<vector<int>> events = {{1, 2, 3}, {3, 4, 4}, {5, 6, 5}, {7, 8, 6}, {9, 10, 7}};
+    vector<vector<int>> events = {{1, 3,2}, {4,5,2}, {2,4,3}};  //! will be sorted in {1,3,2}, {2,4,3}, {4,5,2}
     cout << s.maxTwoEvents(events) << endl;
     return 0;
 }
+
