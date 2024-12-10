@@ -8,14 +8,14 @@ public:
         vector<int> prefix(n, 0); 
         for (int i = 1; i < n; i++) {
             prefix[i] = prefix[i - 1];
-            if ((nums[i - 1] % 2 == 0 && nums[i] % 2 == 0) || (nums[i - 1] % 2 != 0 && nums[i] % 2 != 0)) {
+            if ((nums[i - 1] % 2 == 0 && nums[i] % 2 == 0) || (nums[i - 1] % 2 != 0 && nums[i] % 2 != 0)) {     //we can also write this as "if ((nums[i - 1] % 2) == (nums[i] % 2))"  means if both remainder are same then increment the prefix[i]
                 prefix[i]++;
             }
         }
         vector<bool> ans;
         for (auto& q : queries) {
             int left = q[0], right = q[1];
-            int specialCount = prefix[right] - (left > 0 ? prefix[left] : 0);
+            int specialCount = prefix[right] - (left > 0 ? prefix[left] : 0);           // we can also write this as "int specialCount = prefix[right] -  prefix[left];" since prefix[0] = 0.
             ans.push_back(specialCount == 0);
         }
 
