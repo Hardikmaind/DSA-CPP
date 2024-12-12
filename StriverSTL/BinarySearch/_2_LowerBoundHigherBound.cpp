@@ -17,11 +17,30 @@ int findLowerbound(vector<int>& arr,int &m){
     return n;
 }
 
+// FIND Upper BOUND of m means => Smallest Index Such that "arr[index]>m".IN UPPER BOUND THERE IS NO EQUALITY
+int findUpperBound(vector<int>& arr,int &m){
+    int n=arr.size();           //! If no answer found always return the hypothetical answer
+    int l=0,r=arr.size()-1;
+    while(l<=r){
+        int mid=l+(r-l)/2;
+        if(arr[mid]>m){            //agar beech wala element m se jyada hain toh possible hain ki usse kam wale index bhi m se jyada honge..therefore removed the right search space. and also possible that ki wohi lower bound ho
+            n=mid;
+            r=mid-1;
+
+        }else{
+            l=mid+1;
+        }
+    }
+    return n;
+}
 int main(){
     vector<int> arr={1,2,3,3,5,6,6,6,8,8,10,10,11};
-    int m=7;
+    int m=6;
     int lowerbound=findLowerbound(arr,m);
     cout<<lowerbound<<endl;
+    int upperbound=findUpperBound(arr,m);
+    cout<<upperbound<<endl;
+    cout<<"=====================STL=========================="<<endl;
 
 
     //! default method in the cpp
