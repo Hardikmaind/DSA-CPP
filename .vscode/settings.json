@@ -112,6 +112,7 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "typeindex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "_2558_takegiftsfromthereachestpile": "cpp"
     }
 }
