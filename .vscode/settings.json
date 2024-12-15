@@ -113,6 +113,27 @@
         "thread": "cpp",
         "typeindex": "cpp",
         "valarray": "cpp",
-        "_2558_takegiftsfromthereachestpile": "cpp"
+        "_2558_takegiftsfromthereachestpile": "cpp",
+        "any": "cpp",
+        "barrier": "cpp",
+        "*.tcc": "cpp",
+        "codecvt": "cpp",
+        "cuchar": "cpp",
+        "expected": "cpp",
+        "memory_resource": "cpp",
+        "source_location": "cpp",
+        "string_view": "cpp",
+        "generator": "cpp",
+        "latch": "cpp",
+        "numbers": "cpp",
+        "print": "cpp",
+        "semaphore": "cpp",
+        "shared_mutex": "cpp",
+        "spanstream": "cpp",
+        "stacktrace": "cpp",
+        "stdfloat": "cpp",
+        "syncstream": "cpp",
+        "text_encoding": "cpp",
+        "variant": "cpp"
     }
 }
