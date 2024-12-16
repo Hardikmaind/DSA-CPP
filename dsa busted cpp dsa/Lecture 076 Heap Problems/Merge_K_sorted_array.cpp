@@ -5,7 +5,7 @@
 
 
 #include <bits/stdc++.h> 
-
+using namespace std;
 //Approach 1
 // create a vector
 // push all elements [N*K]
