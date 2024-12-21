@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// https://leetcode.com/problems/reverse-odd-levels-of-binary-tree/solutions/6144529/reverse-odd-levels-of-binary-tree
  struct TreeNode {
       int val;
       TreeNode *left;
@@ -24,15 +25,43 @@ private:
         }
         // If the current level is odd, swap the values of the children.
         if (level % 2 == 0) {
-            int temp = leftChild->val;
-            leftChild->val = rightChild->val;
-            rightChild->val = temp;
+            // int temp = leftChild->val;
+            // leftChild->val = rightChild->val;
+            // rightChild->val = temp;
+            swap(leftChild->val, rightChild->val);        //! Instead of above 3 lines, we can use this line
         }
 
         traverseDFS(leftChild->left, rightChild->right, level + 1);
         traverseDFS(leftChild->right, rightChild->left, level + 1);
     }
 };
+
+void levelOrder(TreeNode* root){
+    if(root==nullptr){
+        return;
+    }
+    queue<TreeNode*> q;
+    q.push(root);
+    while(!q.empty()){
+        TreeNode* node = q.front();
+        q.pop();
+        cout<<node->val<<" ";
+        if(node->left!=nullptr){
+            q.push(node->left);
+        }
+        if(node->right!=nullptr){
+            q.push(node->right);
+        }
+    }
+}
+void printPreorder(TreeNode* node) {
+    if (node == nullptr) {
+        return;
+    }
+    cout << node->val << " ";
+    printPreorder(node->left);
+    printPreorder(node->right);
+}
 
 int main(){
     Solution sol;
@@ -45,5 +74,8 @@ int main(){
     root->right->right = new TreeNode(34);
 
     TreeNode* result = sol.reverseOddLevels(root);
-    cout<<result->val<<endl;
+    // cout<<result->val<<endl;
+    printPreorder(result);
+    cout<<endl;
+    levelOrder(result);
 }
