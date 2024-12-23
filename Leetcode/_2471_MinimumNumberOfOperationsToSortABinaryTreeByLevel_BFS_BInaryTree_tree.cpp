@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
- struct TreeNode {
+struct TreeNode {
       int val;
       TreeNode *left;
       TreeNode *right;
@@ -66,6 +66,16 @@ private:
 
 int main(){
     Solution s;
-    vector<int> roots={}
+    TreeNode* root = new TreeNode(5);
+    root->left = new TreeNode(4);
+    root->right = new TreeNode(3);
+    root->left->left = new TreeNode(7);
+    root->left->right = new TreeNode(6);
+    root->right->left = new TreeNode(8);
+    root->right->right = new TreeNode(5);
+    root->right->left->left = new TreeNode(9);
+    root->right->right->left = new TreeNode(10);
+    cout<<s.minimumOperations(root);
 
+    
 }
