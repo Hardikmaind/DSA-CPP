@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Server",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-o", "server.exe",
+                "server.cpp",
+                "-I", "C:/boost_1_87_0/boost/asio",
+                "-L", "C:/boost_1_87_0/boost/asio",
+                "-lboost_system"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Builds the Boost-based TCP server"
+        }
+    ]
+}
