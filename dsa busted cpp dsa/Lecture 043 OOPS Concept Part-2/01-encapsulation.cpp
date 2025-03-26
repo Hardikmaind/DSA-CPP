@@ -31,12 +31,31 @@ class student {
         int getAge() {
             return this -> age;
         }
+        void setAge(int age){
+            try
+            {
+                if(age < 0) {
+                    throw invalid_argument("Age can't be negative");
+                }
+                this -> age = age;
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << e.what() << '\n';
+            }
+            
+            
+           
+        }
 
 };
 
 int main() {
     
     student first;
+    first.setAge(-20);
+
+    cout<<first.getAge()<<endl;
     
     cout << endl;
     return 0;

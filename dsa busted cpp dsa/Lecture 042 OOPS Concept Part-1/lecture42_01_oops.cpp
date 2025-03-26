@@ -10,6 +10,7 @@ class Hero{
     char level;
 
     void print() {
+        cout<<"HEllo world"<<endl;
         cout << level << endl;
         cout << level1 << endl;
     }
