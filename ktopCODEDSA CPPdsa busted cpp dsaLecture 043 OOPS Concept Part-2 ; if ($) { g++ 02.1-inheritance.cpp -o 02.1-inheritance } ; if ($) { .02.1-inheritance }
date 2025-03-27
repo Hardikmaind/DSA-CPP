@@ -1,0 +1,204 @@
+[33mcommit 1285bebd00dec4d741b7fa25851eddddafc23724[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Wed Mar 26 23:49:29 2025 +0530
+
+    _gfg_WordBreak_DP
+
+[33mcommit b8751f96368094d7709085081ea677f6b81fa5b9[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Tue Mar 25 23:58:31 2025 +0530
+
+    _gfg_BooleanParenthesization_DP
+
+[33mcommit 1ec22f0f073b5df604f78a3bd46e9c242112cf7c[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Tue Mar 18 23:03:55 2025 +0530
+
+    degenerate triangle check algo
+
+[33mcommit 579e7e1f747197adda796e20fadc1e2e544a6871[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sun Feb 9 23:43:14 2025 +0530
+
+    _gfg_MaximumPathSumFromAnyNode_Tree_recursion
+    _2364_CountNumberOfBadPairs_Math_Permutation_HashMaps
+
+[33mcommit 031f333d80b10711de06fa63c989ecfb50968d80[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sat Feb 8 22:36:03 2025 +0530
+
+    _gfg_TreeBoundryTraversal_Tree _2349_DesignANumberContainerSystem_Design_hashMap_Hashtree_Heap_OrderedSet
+
+[33mcommit 00cd863bba159b0698f4eee7375df453c922d718[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Wed Feb 5 15:20:45 2025 +0530
+
+    _gfg_MirrorTree_Tree  _1790_CheckIfOneStringSwapCanMakeStringsEqual_HashMap_Strings_Counting
+
+[33mcommit dcf2f23bf128f789e2998bf5a185e8f20bd8210a[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Tue Feb 4 11:43:52 2025 +0530
+
+    _gfg_DiameterOfABinaryTree_Tree  _1800_MaximumAscendingSubarraySum_Array
+
+[33mcommit 3e9394162ee9efe3b56d6ca2d68a8e91ea636e0e[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Mon Feb 3 09:39:42 2025 +0530
+
+    _gfg_HeightOfBinaryTree_Tree_dfs _3105_LongestStrictlyIncreasingOrStrictlyDecreasingSubarray_Array
+
+[33mcommit e3d1865c92b7829ff705c1e11e62ad82af69a8dd[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sun Feb 2 16:22:29 2025 +0530
+
+    _gfg_LevelOrderTraversal_tree_Bfs_queue_arrays _1752_CheckIfArrayIsSortedAndRotated_Array
+
+[33mcommit 5fb90938735da9ce6aa677b8535ba0322f05de4f[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sat Feb 1 22:53:07 2025 +0530
+
+    _gfg_WordSearch_recursion_dfs_Graph_Backtracking _3151_SpecialArray1_Arrays
+
+[33mcommit c2293c1a5336899e7865f080c0a334d371477247[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Fri Jan 31 15:29:38 2025 +0530
+
+    _gfg_SolveTheSuduko_Matrix_Backtracking _827_MakingALargeIsland_dfs_bfs_UnionFind_matrix
+
+[33mcommit 0ae1479fba89a043e272f4c32efb75d558e0b2a9[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Thu Jan 30 23:29:21 2025 +0530
+
+    _NQueenProblem_Backtracking_Algo _2493_DivideNodesIntoTheMaximumNumberOfGroups_bfs_dfs_UnionFind_graph
+
+[33mcommit 2dbc9b679845248f67dbabaca0fbd8d7e3ab73fd[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Wed Jan 29 21:09:17 2025 +0530
+
+    _gfg_ImplementRow_maths_logic _684_RedundantConnection_Dfs_Bfs_UnionFind_Graph
+
+[33mcommit 6a3031a1f678ddf90b9e2789a8a51e66c99ff56d[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Tue Jan 28 23:10:17 2025 +0530
+
+    _2658_MaximumNumberOfFishInAGrid_Dfs_Bfs_Matrix_UnionFind _gfg_PermutationsOfString_String_recursion_Backtracking
+
+[33mcommit f4fe1b9f6d4e9140f65ae645180af7a910b01af8[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Mon Jan 27 18:24:22 2025 +0530
+
+    _gfg_LRUCache_DoublyLinkedList_DesignPatterns_Hash_Queue  _1462_CourseSchedule4_Dfs_Bfs_Graph_TopologicalSort
+
+[33mcommit 26270b396270bb56032a85518f9e136e628c7c48[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sun Jan 26 22:48:59 2025 +0530
+
+    _2127_MaximumEmployeesToBeInvitedToAMeeting_Dfs_Graph_toposort _gfg_RemoveLoopInLinkedList_LinkedList_Twopointer_TortoiseHeirAlgo
+
+[33mcommit e540a3f9812420765cd7e415fe4a7e5d2245c9de[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sat Jan 25 23:20:01 2025 +0530
+
+    _gfg_FindTheFIrstNodeOfLoopInLinkedList_LinkedList_Twopointer_TortoiseAndHeirAlgo _2948_MakeLexicographicalySmallestArrayBySwappingElements_Array_UnionFind_Sorting
+
+[33mcommit acadd4209647dfdba0b21d83c1972237823ebe64[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Fri Jan 24 23:34:55 2025 +0530
+
+    _gfg_DetectLoopInLinkedList_TwoPointer_LinkedList _802_FindEventualSafeStates_dfs_bfs_graph_TopologicalSort
+
+[33mcommit ebd2281ba2dd0b3a5c63dedd416cffac11f47d09[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Thu Jan 23 22:43:00 2025 +0530
+
+    _gfg_CloneListWitheNextAndRandom_LinkedList  _1267_CountServersThatCommunicate_UnionFind_bfs_dfs_Array_counting_Matrix
+
+[33mcommit 72d16f568408a357595ce64f7979242f9b82a363[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Wed Jan 22 18:11:03 2025 +0530
+
+    _gfg_AddNumberLinkedList_LinkedList _1765_MapOfHighestPeak_Array_Bfs_Matrix
+
+[33mcommit 2eed67e191e78408933c753029dfd2f3b42f9670[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Tue Jan 21 22:37:33 2025 +0530
+
+    _gfg_LinkedListGroupReverse_LinkedList  _2017_GridGame_Array_Matrix_PrefixSum
+
+[33mcommit fb638785d631b36b032f4762b0210280ce90efab[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Mon Jan 20 21:45:11 2025 +0530
+
+    _2661_FindCompletelyPaintedRowOrColumn_Array_HashMap_Matrix optimum
+
+[33mcommit 68f3648f2e7bbd820b93621bedf51818c471c089[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Mon Jan 20 21:43:13 2025 +0530
+
+    _gfg_MergeTwoSortedLinkedList_LinkedList _2661_FindCompletelyPaintedRowOrColumn_Array_HashMap_Matrix
+
+[33mcommit 04cb808099deceb71e758c117b0df4758b5905f8[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sun Jan 19 23:34:48 2025 +0530
+
+    _gfg_RotateALinkedList_LinkedList _407_TrappingRainWater2_bfs_dfs_heap_array_matrix
+
+[33mcommit 8e1fa979d3e2c605af71e8d971c1039b16816a08[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sat Jan 18 23:34:12 2025 +0530
+
+    _gfg_ReverseALinkedList_LinkedList _1368_MinimumCostToMakeAtLeastOneValidPathInAGrid_Array_BinarySearch_bfs_Graph_heap_matrix_shortestPath
+
+[33mcommit bd1e5e192608671d521a166e4884fc71d025b9b0[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Fri Jan 17 22:09:03 2025 +0530
+
+    _2683_NeighboringBitwiseXor_Bitmanipulation_Array _gfg_ProductArrayPuzzle_prefix_Array
+
+[33mcommit f64bd71fe23b87c4e6cc70ef09e93d76a06fe13d[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Thu Jan 16 23:18:31 2025 +0530
+
+    _2425_BitwiseXOROfAllPairings_Array_BitwiseManipulation_Brainteaser _gfg_LargestSubarrayOf0sand1s_slidingWindow_hashmap_prefixSum
+
+[33mcommit f5e12a21152ca6dc9d8d5672decf4b1d5d2eefea[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Wed Jan 15 23:46:43 2025 +0530
+
+    _gfg_LargestSubstringWithSum_arrays_hashmap _2429_MinimizeXOR_Bitmamipulation_Greedy
+
+[33mcommit a9fe7773c11dc44465e43a15c07212005e6a7fa1[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Tue Jan 14 19:33:01 2025 +0530
+
+    _2657_FindThePrefixCommonArrayOfTwoArrays_Array_Hashmap_Bitmanipulation _gfg_EquilibriumPoint_Aray_prefixSum
+
+[33mcommit 5c1ba6d4a8a9384e7e9bc7c0804165f68e5115df[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Mon Jan 13 21:36:30 2025 +0530
+
+    _3223_MinimumLengthOfStringAfterOperations_Hashtable_String_counting _gfg_ContainerWithMostWater_ararys_maths_puzzle
+
+[33mcommit c656e2960278305a1665203cb7551ae2f34cd79d[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sun Jan 12 20:58:51 2025 +0530
+
+    _gfg_TrappingRainWater_Array_dp_stack_Twopointer_string _2116_CheckIfAParenthesesStringCanBeValid_String_Stack_Greedy-1.png
+
+[33mcommit 2c0cdcaa777e7d663769ec137f88259360f372db[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Sat Jan 11 23:15:09 2025 +0530
+
+    _gfg_LongestSubstringWithDistinctCharacters_Strings _1400_ConstructKPalindromeStrings_HashMap_string_greedy_Counting
+
+[33mcommit 09640f4912a213d29e1d0a29e5d03466d43a6a2b[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Fri Jan 10 23:56:02 2025 +0530
+
+    _gfg_CountDistinctEementsInEveryWindow_SlidingWindow_Hash _916_WordSubsets_Array_HashTable_String
+
+[33mcommit 5ed92a0d5d5894acb76e372398fbab26226867ca[m
+Author: Hardikmaind <maindhardik@gmail.com>
+Date:   Fri Jan 10 23:19:37 2025 +0530
+
+    _412_FizzBuzz_String_Math_Sim
