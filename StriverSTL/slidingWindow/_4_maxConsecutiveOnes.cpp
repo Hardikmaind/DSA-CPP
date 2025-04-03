@@ -23,12 +23,12 @@ int maxConsecutive1s(vector<int>&arr,int k){
     
 }
 
-int maxConsecutive1s2(vector<int>& nums, int k) {
+int maxConsecutive1s2(vector<int>& arr, int k) {
     int l=0,r=0,maxlen=0,zeroc=0;
-    while(r<nums.size()){
-        if(nums[r]==0) zeroc++;
+    while(r<arr.size()){
+        if(arr[r]==0) zeroc++;
         if(zeroc>k){                //! here i have used if instead of while because i want to reduce the time complexity
-            if(nums[l]==0) {
+            if(arr[l]==0) {
                 zeroc--;
             }
             l++;
@@ -43,4 +43,6 @@ int main(){
     vector<int> arr={1,1,1,0,0,0,1,1,1,1,0};
     int k=2;
     cout<<maxConsecutive1s(arr,k)<<endl;
+    cout<<maxConsecutive1s2(arr,k)<<endl;
+
 }
