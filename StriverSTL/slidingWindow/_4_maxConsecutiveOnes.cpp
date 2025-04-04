@@ -2,6 +2,7 @@
 using namespace std;
 
 // ! PROBLEM CAN BE CONVERTED INTO THE FINDING THE LONGEST SUBARRAY WITH MAXZEROS AS K;
+// * tc is O
 int maxConsecutive1s(vector<int>&arr,int k){
     int r=0;
     int l=0;
@@ -22,6 +23,9 @@ int maxConsecutive1s(vector<int>&arr,int k){
     return maxlen;
     
 }
+
+
+// tc is O(n) and sc is O(1)
 
 int maxConsecutive1s2(vector<int>& arr, int k) {
     int l=0,r=0,maxlen=0,zeroc=0;
