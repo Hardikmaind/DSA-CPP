@@ -1,8 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//! TC: O(n) + O(2n) = O(n)
+//! SC: O(2n) = O(n) for the map
+//* THIS IS THE OPTIMISEC SOLUTION
 int fruitsIntoBaskets(vector<int>&arr){
-    int b1=0,b2=0,l=0,r=0,maxfruits=0,n=arr.size();
+    int l=0,r=0,maxfruits=0,n=arr.size();
    
     unordered_map<int,int>map;
     while(r<n){
@@ -24,6 +27,25 @@ int fruitsIntoBaskets(vector<int>&arr){
     return maxfruits;
 }
 
+
+//* THIS BELOW IS THE BRUTE FORCE SOLUTION
+//! this is the brute force solution tc is O(n^2) {ignore the adding in the set which is logN, but N=2, so ignore}. and sc is also 1 ignore since set size is only 2.
+int fruitsIntoBaskets2(vector<int>&arr){
+    int maxlen=0;
+    for(int i=0;i<arr.size();i++){
+        unordered_set<int>set;
+        for(int j=i;j<arr.size();j++){
+            set.insert(arr[j]);
+            if(set.size()<=2){
+                maxlen=max(maxlen,j-i+1);
+            }else{
+                break;
+            }
+        }
+    }
+    return maxlen;
+}
+
 /*
 int demo(){
     return 1;
@@ -39,6 +61,7 @@ void demo2(){
 int main(){
     vector<int> arr={3,3,3,1,2,1,1,2,3,3,4};
     cout<<fruitsIntoBaskets(arr)<<endl;
+    cout<<fruitsIntoBaskets2(arr)<<endl;
     /*
     cout<<demo()<<endl;
     // cout<<demo2()<<endl;
