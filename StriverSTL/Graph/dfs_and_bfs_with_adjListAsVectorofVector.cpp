@@ -45,6 +45,21 @@ public:
         return res;
         
     }
+      // ✅ New Function to Get Connected Components
+      vector<vector<int>> connectedComponents(vector<vector<int>>& adj) {
+        int n = adj.size();
+        vector<int> vis(n, 0);
+        vector<vector<int>> components;
+
+        for (int i = 0; i < n; ++i) {
+            if (!vis[i]) {
+                vector<int> comp;
+                dfsutil(i, adj, vis, comp);
+                components.push_back(comp);
+            }
+        }
+        return components;
+    }
 };
 
 int main()
@@ -73,6 +88,19 @@ int main()
     for(auto x:res)
     {
         cout<<x<<" ";
+    }
+
+
+
+
+    // ✅ Print connected components
+    auto comps = Solution().connectedComponents(adj);
+    cout << "\nConnected Components:\n";
+    int idx = 1;
+    for (auto &comp : comps) {
+        cout << "Component " << idx++ << ": ";
+        for (auto x : comp) cout << x << " ";
+        cout << "\n";
     }
     return 0;
 
