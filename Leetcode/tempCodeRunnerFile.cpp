@@ -1,1 +1,6 @@
-#include <bits/stdc++.h>
+     void printArray(vector<char>& arr) {
+            for (char c : arr) {
+                cout << c;
+            }
+            cout << endl;
+        }
