@@ -32,7 +32,8 @@ class Solution {
                 int size = q.size();
                 currTime++;
     
-                for (int i = 0; i < size; i++) {
+                for (int i = 0; i < size; i++) {                //! this size ensures that     // Only process oranges that were rotten *before* this minute started
+
                     pair<int, int> cell = q.front(); q.pop();
                     int x = cell.first, y = cell.second;
     

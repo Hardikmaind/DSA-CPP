@@ -28,7 +28,7 @@ class Solution {
       vector<int> articulationPoints(int V, vector<vector<int>>& edges) {
           vector<int> adj[V];
           for (auto& e : edges) {
-              adj[e[0]].push_back(e[1]);
+              adj[e[0]].push_back(e[1]);                    //! instead of doing int u=e[0] and int v=e[1] i have done it directly
               adj[e[1]].push_back(e[0]);
           }
           vector<bool> vis(V, false), isArticulation(V, false);
