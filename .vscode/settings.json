@@ -23,6 +23,8 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "string": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp"
     }
 }
