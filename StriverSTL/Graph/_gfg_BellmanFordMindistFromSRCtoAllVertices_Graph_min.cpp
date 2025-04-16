@@ -31,7 +31,7 @@ class Solution {
                   return {-1};
               }
           }
-          // Step 3: Replace INF with 108 for unreachable vertices
+          // Step 3: Replace INF with 1e8 for unreachable vertices
           for (int i = 0; i < V; i++) {
               if (dist[i] == INF) dist[i] = 1e8;
           }
