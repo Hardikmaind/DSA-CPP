@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//! Bellman-Ford Algorithm is an algorithm for finding the shortest paths between nodes in a graph.
+//* It is a single-source shortest path algorithm that detects negative cycles.
+//! It can detect negative cycles.
+//! also known as the "Bellman-Ford-Moore Algorithm"
+//! in this algorithm, we are using the concept of relaxation
+
 class Solution {
     public:
       vector<int> bellmanFord(int V, vector<vector<int>>& edges, int src) {
