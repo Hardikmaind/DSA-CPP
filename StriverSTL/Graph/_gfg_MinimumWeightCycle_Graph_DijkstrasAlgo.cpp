@@ -58,56 +58,9 @@ public:
     }
 };
 
-
-class Solution2 {
-    public:
-        int dijkstra(int src, int des, unordered_map<int, vector<pair<int, int>>>& adj,
-                     int V, int skip_u, int skip_v) {
-            priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq;
-            vector<int> res(V, INT_MAX);
-            res[src] = 0;
-            pq.push({0, src});
-            
-            while (!pq.empty()) {
-                auto [d, u] = pq.top(); pq.pop();
-                
-                for (auto& [v, wt] : adj[u]) {
-                    if ((u == skip_u && v == skip_v) || (u == skip_v && v == skip_u)) continue;
-                    if (res[u] + wt < res[v]) {
-                        res[v] = res[u] + wt;
-                        pq.push({res[v], v});
-                    }
-                }
-            }
-            return res[des];
-        }
-    
-        int findMinCycle(int V, vector<vector<int>>& edges) {
-            unordered_map<int, vector<pair<int, int>>> adj;
-            for (auto& edge : edges) {
-                int u = edge[0], v = edge[1], w = edge[2];
-                adj[u].emplace_back(v, w);
-                adj[v].emplace_back(u, w);
-            }
-    
-            int ans = INT_MAX;
-            for (auto& edge : edges) {
-                int u = edge[0], v = edge[1], w = edge[2];
-                int path = dijkstra(u, v, adj, V, u, v);
-                if (path != INT_MAX) {
-                    ans = min(ans, path + w);  // total cycle = path + skipped edge
-                }
-            }
-    
-            return ans == INT_MAX ? -1 : ans;
-        }
-    };
-    
-
 int main()
 {
     Solution obj;
-    Solution2 obj2;
     int V = 5;
     vector<vector<int>> edges = {
         {0, 1, 2},
@@ -117,7 +70,5 @@ int main()
         {0, 4, 3},
         {2, 3, 4}};
     cout << obj.findMinCycle(V, edges);
-    cout << endl;
-    cout << obj2.findMinCycle(V, edges);
     return 0;
 }
