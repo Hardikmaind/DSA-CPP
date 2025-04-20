@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//! dfs with the adjacency matrix.
 class Solution
 {
 public:
@@ -32,17 +33,17 @@ public:
         return noOfProvince;
     }
 };
+
+//! dfs with the adjacency list.
 class Solution2
 {
 public:
-    void dfs(int src, vector<int> &vis, vector<vector<int>> &adj)
+    void dfs(int src, vector<int> &vis, vector<vector<int>> &adjlist)
     {
         vis[src] = 1;
-        for (int i = 0; i < adj.size(); i++)
-        {
-            if (adj[src][i] && !vis[i])
-            {
-                dfs(i, vis, adj);
+        for(auto &x:adjlist[src]){
+            if(!vis[x]){
+                dfs(x, vis, adjlist);
             }
         }
     }
@@ -50,6 +51,19 @@ public:
     {
         // code here
         int noOfProvince = 0;
+        //* Here I have created the adjacency list
+        vector<vector<int>>adjlist(V);
+        for(int i=0;i<V;i++)
+        {
+            for(int j=0;j<V;j++)
+            {
+                if(adj[i][j] && i!=j)           // here i have not added the self loop
+                {
+                    adjlist[i].push_back(j);
+                    adjlist[j].push_back(i);
+                }
+            }
+        }
         vector<int> vis(V, 0);
         for (int i = 0; i < V; i++)
         {
@@ -57,7 +71,7 @@ public:
             {
 
                 noOfProvince++;
-                dfs(i, vis, adj);
+                dfs(i, vis, adjlist);
             }
         }
         return noOfProvince;

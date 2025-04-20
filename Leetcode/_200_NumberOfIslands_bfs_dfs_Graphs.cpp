@@ -83,7 +83,7 @@ class Solution3 {
                 }
                 grid[i][j] = '0';           //! we mark is as visited . or we make it as water so we dont go on it again
 
-                dfs(grid, i + 1, j);        //* pehle ye pura i+1 , i+1 ,i+1 jayega, pura khatam karega, then ye pura j+1, j+1, j+1 jayega,then pura i-1,i-1,i-1 jayega and so on.
+                dfs(grid, i + 1, j);        //* pehle ye pura i+1 , i+1 ,i+1 jayega, pura khatam karega, then ye j+1 and again i+1,i+1,i+1, uske baad firse j+1 pura... so on.
                 dfs(grid, i, j + 1);
                 dfs(grid, i - 1, j);
                 dfs(grid, i, j - 1);
