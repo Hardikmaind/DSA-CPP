@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
     public:
-    
+    //! for dfs this uses the directional vectors dx and dy
     void dfs(int i,int j,vector<vector<int>>&vis,vector<vector<char>>& mat){
         vis[i][j]=1;
         int dx[]={0,1,0,-1};
@@ -17,6 +17,17 @@ class Solution {
                 dfs(deltaX,deltaY,vis,mat);
             }
         }
+    }
+
+    //! we can also do dfs in a matrix like this instead of using the dx and dy direction vectors.
+    void dfs2(int i,int j,vector<vector<int>>&vis,vector<vector<char>>& mat){
+        if(i<0 || i>=mat.size() || j<0 || j>=mat[0].size() || mat[i][j]!='O' || vis[i][j]) return;
+        vis[i][j]=1;
+        dfs2(i+1,j,vis,mat);
+        dfs2(i-1,j,vis,mat);
+        dfs2(i,j+1,vis,mat);
+        dfs2(i,j-1,vis,mat);
+    
     }
       vector<vector<char>> fill(vector<vector<char>>& mat) {
           // code here
