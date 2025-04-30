@@ -30,6 +30,7 @@
         "string_view": "cpp",
         "regex": "cpp",
         "vector": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "new": "cpp"
     }
 }
