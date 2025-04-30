@@ -14,7 +14,7 @@ class Solution {
                     if(!color[x]){
                         color[x]=color[node]==1?-1:1;     // i con also do this color[x]=-color[node]. assigning opposite color
                         q.push(x);
-                    }else if(color[x]==color[node]){
+                    }else if(color[x]==color[node]){                //since node is a parent(neighbour) and its color is same as x then return false;
                         return false;
                     }
                 }

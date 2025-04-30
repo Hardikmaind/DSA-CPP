@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
+// tc is O(n) and sc is O(n) for the hashmap/ this is the general approach. below i have tweaked the solution to improve its tc.
 class Solution {
     public:
         long long countSubarrays(vector<int>& nums, int k) {
@@ -34,6 +34,7 @@ class Solution {
     };
 
 
+    //tc is O(n) and sc is O(1)
     class Solution2 {
     public:
         long long countSubarrays(vector<int>& nums, int k) {
