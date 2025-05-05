@@ -9,7 +9,7 @@ class Solution {
           int l=0,r=0,n=str.size();
           unordered_set<char>set;
           unordered_map<char,int>map;
-          for(auto &x:str){
+          for(auto &x:str){             //! instead of this loop we can also do  unordered_set<char> unique_chars(str.begin(), str.end());
               set.insert(x);
           }
           int distinctEle=set.size();
