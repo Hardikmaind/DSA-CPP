@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
+//! this is my solution
 class Solution {
 public:
     long long minSum(vector<int>& nums1, vector<int>& nums2) {
@@ -49,8 +49,10 @@ public:
     long long minSum(vector<int>& nums1, vector<int>& nums2) {
         long long sum1=accumulate(nums1.begin(),nums1.end(),0);
         long long sum2=accumulate(nums2.begin(),nums2.end(),0);
+
         long long zcount1=count(nums1.begin(),nums1.end(),0);
         long long zcount2=count(nums2.begin(),nums2.end(),0);
+        
         long long adjusttedSum1=sum1+zcount1;
         long long adjusttedSum2=sum2+zcount2;
         
