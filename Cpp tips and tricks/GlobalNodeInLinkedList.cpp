@@ -13,6 +13,8 @@ using namespace std;
         }
 
     }*head;                 //! here we have declared head globally so that we can access it in main function also.
+//* the above is just like we are doing Node*head;      but here instead of just Node we are using the whole struct Node body
+
 
 class Solution {
   public:
