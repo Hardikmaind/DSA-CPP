@@ -50,8 +50,7 @@ class Solution {
                 for (int d = 0; d < 4; ++d) {
                     int nx = x + dx[d];
                     int ny = y + dy[d];
-                    if (nx >= 0 && nx < m && ny >= 0 && ny < n &&
-                        !visited[nx][ny] && voracelium[nx][ny] != '#') {
+                    if (nx >= 0 && nx < m && ny >= 0 && ny < n && !visited[nx][ny] && voracelium[nx][ny] != '#') {
                         visited[nx][ny] = true;
                         q.push({nx, ny});
 

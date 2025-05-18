@@ -21,7 +21,7 @@ class Solution {
             if(!vis[x]){
                 //* src will become the parent the next time we do it again
                  if (dfs(x, src, adjlist, vis)) return true;        //! this is imp see the above comment
-            }else if(vis[x] && x!=parent){
+            }else if(vis[x] && x!=parent){          //? if x is vis and x is not the parent then, there is cycle present.
                 return true;
             }
         }

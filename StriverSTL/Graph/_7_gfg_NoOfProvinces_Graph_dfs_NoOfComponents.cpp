@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//! below is a dfs solution
 class Solution
 {
 public:
@@ -14,6 +15,15 @@ public:
                 dfs(i, vis, adj);
             }
         }
+
+        /*
+        ! above loop can be replaced with below loop
+        for(auto x:adj[src]){
+            if(!vis[x]){
+                dfs(x, vis, adj);
+            }
+        }
+        */
     }
     int numProvinces(vector<vector<int>> adj, int V)
     {
@@ -33,6 +43,61 @@ public:
     }
 };
 
+//! this below is a bfs solution
+
+class Solution2{
+    public:
+    void bfs2(int src, vector<int>& vis, vector<vector<int>>& adj) {
+        queue<int> q;
+        q.push(src);
+        vis[src] = 1;
+
+        while (!q.empty()) {
+            int node = q.front();
+            q.pop();
+
+            for (int i = 0; i < adj.size(); i++) {          //! bfs can also be done by such loop
+                if (adj[node][i] && !vis[i]) {
+                    vis[i] = 1;
+                    q.push(i);
+                }
+            }
+        }
+    }
+
+    void bfs(int src,vector<int>&vis,vector<vector<int>>&adjlist){
+        vis[src]=1;
+        queue<int>q;
+        q.push(src);
+        while(!q.empty()){
+            int node =q.front();q.pop();
+            for(auto &x:adjlist[node]){
+                if(!vis[x]){
+                    vis[x]=1;
+                    q.push(x);
+                }
+            }
+        }
+        return;
+    }
+    int numProvinces(vector<vector<int>> adj, int V)
+    {
+        // code here
+        int noOfProvince = 0;
+        vector<int> vis(V, 0);
+        for (int i = 0; i < V; i++)         //iterate over all componenets
+        {
+            if (!vis[i])
+            {
+
+                noOfProvince++;
+                bfs(i, vis, adj);
+            }
+        }
+        return noOfProvince;
+    }
+};
+
 int main()
 {
     Solution obj;
@@ -40,5 +105,9 @@ int main()
     int V = 3;
     int result = obj.numProvinces(adj, V);
     cout << result << endl;
+
+    Solution2 obj2;
+    int result2 = obj2.numProvinces(adj, V);
+    cout << result2 << endl;
     return 0;
 }

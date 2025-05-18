@@ -34,7 +34,7 @@ class Solution {
                     if(!vis[x]){
                         vis[x]=vis[node]==1?-1:1;
                         q.push(x);
-                    }else if(vis[x]==vis[node]){
+                    }else if(vis[x]==vis[node]){        //? if vis[x]==vis[node(parent)]..here node is parent, then return false
                         return false;
                     }
                 }
