@@ -20,7 +20,7 @@ public:
             }
 
             visit[node] = true;
-            int neighbor = edges[node];
+            int neighbor = edges[node];                 //! no need to run a loop to find the neighbor since each node has at most one outgoing edge
             if (neighbor != -1 && !visit[neighbor]) {
                 dist[neighbor] = 1 + dist[node];
                 q.push(neighbor);

@@ -49,7 +49,7 @@ class Solution2{
             int node = q.front();
             q.pop();
 
-           if(dist[node]!=INT_MAX){
+           if(dist[node]!=INT_MAX){                                     //! The node you're processing was pushed into the queue only after its distance was set, like this. SO it is unnecessary to check dist[node] != INT_MAX
                 for(auto x:adj[node]){
                     if(dist[node]+1<dist[x]){
                         dist[x] = dist[node] + 1;
@@ -72,6 +72,19 @@ class Solution2{
         
     }
 };
+/*
+🔍 Changes and Optimizations:
+Original	                                               Optimized
+Used INT_MAX as default                 	            Use -1 directly to mean "unreachable", simplifies logic
+Checked if(dist[node] != INT_MAX) in loop	            No need; node is always visited
+Used extra res vector	                                Reused dist directly for return value
+Condition if(dist[node]+1<dist[x])                  	In BFS on unweighted graph, if dist[x] == -1 is enough
+
+✅ Why This is Correct:
+You only ever update a node's distance once, when it's first discovered.
+BFS ensures the first time you reach a node is the shortest path.
+Avoids unnecessary comparisons like dist[node] + 1 < dist[x].
+*/
 
 int main(){
     // Example usage
