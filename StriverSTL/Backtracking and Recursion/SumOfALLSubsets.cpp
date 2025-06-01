@@ -12,7 +12,7 @@ class Solution{
             return util(arr,ind+1,sum+arr[ind]) + util(arr,ind+1,sum);
         }
         int allSubsetSum(vector<int>&arr){
-            return util(arr,0,0);
+            return util(arr,0,0); 
         }
 
         // this is another style of writing the code
