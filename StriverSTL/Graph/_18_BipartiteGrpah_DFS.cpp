@@ -16,7 +16,7 @@ private:
                     return false;
                 }
             }
-            else if(vis[src]==vis[x]){      //if visited and color of src and parent is the same then return false;
+            else if(vis[src]==vis[x]){      //if visited and color of src(x is src) and parent(src will be the parent) is the same then return false;
              return false;
             }
         }
