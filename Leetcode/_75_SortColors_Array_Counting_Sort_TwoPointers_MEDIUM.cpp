@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//! THIS IS DUTCH NATIONAL FLAG ALGORITHM, The Dutch National Flag Algorithm (commonly called the Dutch Flag Algorithm) is a three-way partitioning algorithm proposed by Edsger W. Dijkstra. It is used to sort an array with three distinct values (e.g., 0, 1, 2 or 'red', 'white', 'blue') in a single pass and in-place with O(n) time complexity and O(1) space complexity.
 class Solution {
 public:
     void sortColors(std::vector<int>& nums) {
