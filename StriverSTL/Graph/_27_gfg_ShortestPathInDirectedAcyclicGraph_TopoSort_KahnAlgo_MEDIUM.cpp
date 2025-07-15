@@ -22,7 +22,7 @@ class Solution {
         dist[src] = 0;
         for (int node : topo) {
             if (dist[node] != INT_MAX) {
-                for (auto& p : adjlist[node]) {
+                for (auto& p : adjlist[node]) {         //* "p" is a neighbor of "node" in the adjacency list
                     int v = p.first;
                     int wt = p.second;
                     if (dist[node] + wt < dist[v]) {

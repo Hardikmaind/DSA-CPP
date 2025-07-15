@@ -51,7 +51,7 @@ class Solution2{
 
            if(dist[node]!=INT_MAX){                                     //! The node you're processing was pushed into the queue only after its distance was set, like this. SO it is unnecessary to check dist[node] != INT_MAX
                 for(auto x:adj[node]){
-                    if(dist[node]+1<dist[x]){
+                    if(dist[node]+1<dist[x]){                   //? +1 because its a unit edge
                         dist[x] = dist[node] + 1;
                         q.push(x);
                     }
