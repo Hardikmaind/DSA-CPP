@@ -5,18 +5,18 @@ const int INF = 1e9; // Define INF as a large value
 class Solution{
     public:
         vector<int>dijkstraAlgo(int src,vector<vector<pair<int,int>>>&adj){
-        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;         //? here pair is pair<int,int>  (adjnode,wt)
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;         //? here pair is pair<int,int>  (wt,adjnode)
             vector<int>dist(adj.size(),INF);
             dist[src]=0;
-            pq.push({src,0});
+            pq.push({0,src});
             while(!pq.empty()){
-                int node=pq.top().first;
-                int wt=pq.top().second;
+                int node=pq.top().second;
+                int wt=pq.top().first;
                 pq.pop();
                 for(const auto &[adjnode,wt]:adj[node]){
                     if(dist[node]+wt<dist[adjnode]){
                         dist[adjnode]=dist[node]+wt;
-                        pq.push({adjnode,dist[adjnode]});
+                        pq.push({dist[adjnode],adjnode});
                     }
                 }
 
