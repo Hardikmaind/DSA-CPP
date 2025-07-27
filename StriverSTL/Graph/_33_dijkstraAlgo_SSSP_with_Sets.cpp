@@ -38,9 +38,13 @@ class Solution{
 
 int main(){
     Solution obj;
-                    // vertex  wt
+                    // wt  vertex
     vector<vector<pair<int,int>>>adjlist={{{1,4},{2,4}},{{0,4},{2,2}},{{0,4},{1,2},{3,3},{4,1},{5,6}},{{2,3},{5,2}},{{2,1},{5,3}},{{2,6},{3,2},{4,3}}};
+    auto start = std::chrono::high_resolution_clock::now();
     auto res=obj.dijkstraAlgo(0,adjlist);
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
+    cout << "Time taken: " << duration.count() << " nanoseconds" << endl;
     for(auto &x:res){
         cout<<x<<endl;
     }

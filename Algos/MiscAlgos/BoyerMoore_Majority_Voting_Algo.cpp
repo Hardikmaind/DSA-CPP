@@ -32,7 +32,7 @@ class Solution {
 
   int main(){
     Solution obj;
-    vector<int>arr={1,1,2,1,3,1,5};
+    vector<int>arr={1,2,2,3,4,5,6,7,8,9};
     int result = obj.majorityElement(arr);
     cout<<result;
     return 0;
