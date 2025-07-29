@@ -35,7 +35,7 @@ public:
     }
 };
 
-
+//! this solutino uses tuple and alias. see how we have used pii for pair and tuple in priority queue( because we dont have method .first and .second for tuple)
 class Solution2 {
 public:
     int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
