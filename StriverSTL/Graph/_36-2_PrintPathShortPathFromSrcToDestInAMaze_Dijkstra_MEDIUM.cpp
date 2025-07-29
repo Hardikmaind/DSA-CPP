@@ -15,7 +15,7 @@ public:
             return {{-1,-1}};
 
         vector<vector<int>> dist(n, vector<int>(m, 1e9));
-        priority_queue<pair<int, int>> q; //! here we can use the normal queue since all weights are 1. but incase different weights. we have to use the priority queueu
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> q; //! here we can use the normal queue since all weights are 1. but incase different weights. we have to use the priority queueu
 
         vector<pair<int,int>>path;
 

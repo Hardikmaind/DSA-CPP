@@ -62,7 +62,7 @@ public:
             return -1;
 
         vector<vector<int>> dist(n, vector<int>(m, 1e9));
-        priority_queue<pair<int, int>> q; //! here we can use the normal queue since all weights are 1. but incase different weights. we have to use the priority queueu
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> q; //! here we can use the normal queue since all weights are 1. but incase different weights. we have to use the priority queueu
 
         dist[source.first][source.second] = 0;
         q.push(source);
@@ -201,11 +201,63 @@ public:
     }
 };
 
+
+
+//* BELOW IS STRIVERS CODE. PROPER PRIORITY QUEUE IMPLEMENTATION OF DIJKSTRA'S ALGORITHM.
+class Solution5
+{
+public:
+    int shortestPath(vector<vector<int>> &grid, pair<int, int> source, pair<int, int> destination)
+    {
+        int n = grid.size();
+        int m = grid[0].size();
+
+        if (grid[source.first][source.second] == 0 || grid[destination.first][destination.second] == 0)
+            return -1;
+
+        vector<vector<int>> dist(n, vector<int>(m, 1e9));
+                priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<>> pq;     
+ //! here we can use the normal queue since all weights are 1. but incase different weights. we have to use the priority queueu
+
+        dist[source.first][source.second] = 0;
+        pq.push({0,{source.first, source.second}});
+
+        vector<pair<int, int>> dirs = {{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
+
+        while (!pq.empty())
+        {
+            auto it = pq.top();
+            int x = it.second.first;
+            int y = it.second.second;
+            pq.pop();
+
+            for (auto it : dirs)
+            {
+                int nx = x + it.first;
+                int ny = y + it.second;
+
+                if (nx >= 0 && nx < n && ny >= 0 && ny < m && grid[nx][ny] == 1)
+                {
+                    if (dist[nx][ny] > dist[x][y] + 1)
+                    {
+                        dist[nx][ny] = dist[x][y] + 1;
+                        pq.push({dist[nx][ny],{nx, ny}});
+                    }
+                }
+            }
+        }
+
+        //! after calculating whole dist array, we can check the distance to the destination. thought this is not necessary for this problem
+        return dist[destination.first][destination.second] == 1e9 ? -1 : dist[destination.first][destination.second];
+    }
+};
+
 int main()
 {
     Solution sol;
     Solution3 sol3;
     Solution4 sol4;
+    Solution5 sol5;
     vector<vector<int>> grid = {
         {1, 1, 0, 1},
         {1, 1, 0, 1},
@@ -219,6 +271,9 @@ int main()
     result = sol3.shortestPath(grid, source, destination); //! here we are calculating the whole dist array
     cout << "Shortest Path Length: " << result << endl;
     result = sol4.shortestPath(grid, source, destination); // here we are using the priority queue
+    cout << "Shortest Path Length: " << result << endl;
+
+    result = sol5.shortestPath(grid, source, destination); // here we are using the priority queue
     cout << "Shortest Path Length: " << result << endl;
 
     return 0;
