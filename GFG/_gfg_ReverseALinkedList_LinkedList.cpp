@@ -10,7 +10,7 @@ using namespace std;
     Node(int val) : data(val), next(nullptr) {}
 };
 
-
+//! THIS IS A RECURSIVE SOLUTION TO REVERSE A LINKED LIST
 class Solution {
   public:
      Node* reverse(Node* head)
@@ -34,6 +34,27 @@ class Solution {
     }
 };
 
+//! THIS IS A ITERATIVE SOLTION TO REVERSE A LINKED LIST
+
+class Solution2 {
+    public:
+    Node *reverseList(Node* head){
+        if(head==nullptr || head->next==nullptr){
+            return head;
+        }
+        Node* prev=nullptr;
+        Node* forward=nullptr;
+        Node*curr=head;
+        while(curr!=nullptr){
+            forward=curr->next;
+            curr->next=prev;
+            prev=curr;
+            curr=forward;
+        }
+        return prev;
+    }
+};
+
 int main(){
     Node *head = new Node(1);
     head->next = new Node(2);
@@ -42,9 +63,21 @@ int main(){
 
     Solution ob;
     Node *newhead = ob.reverseList(head);
-    while(newhead){
-        cout<<newhead->data<<" ";
-        newhead = newhead->next;
+    Node *temp=newhead;
+    while(temp){
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
+    cout<<endl;
+
+
+    //! here i am reversing a reverse linkedlist
+    Solution2 ob2;
+    Node *newhead2 = ob2.reverseList(newhead);
+    temp=newhead2;
+    while(temp){
+        cout<<temp->data<<" ";
+        temp = temp->next;
     }
     cout<<endl;
     return 0;
